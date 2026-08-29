@@ -1,4 +1,4 @@
-import { cn } from "@/lib/utils";
+import { asset, cn } from "@/lib/utils";
 
 export function Media({
   src,
@@ -11,7 +11,7 @@ export function Media({
 }) {
   return (
     <img
-      src={src}
+      src={asset(src)}
       alt={alt}
       className={cn("h-full w-full object-cover", className)}
     />

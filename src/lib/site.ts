@@ -1,8 +1,9 @@
 export const SITE = {
   name: "Waypoint Aerial",
+  owner: "Tom ReMine",
   city: "Indianapolis, Indiana",
   region: "Central Indiana",
-  email: "hello@waypointaerial.com",
+  email: "tvremine@gmail.com",
   tagline: "Precision from above.",
   description:
     "FAA Part 107 aerial cinematography, inspection, and mapping for Indianapolis and Central Indiana.",
@@ -212,7 +213,7 @@ export const STEPS = [
 ] as const;
 
 export const CREDENTIALS = [
-  { label: "FAA Part 107", detail: "Remote Pilot in Command" },
+  { label: "FAA Part 107", detail: "Remote Pilot in Command — Tom ReMine" },
   { label: "Insured", detail: "Commercial sUAS liability" },
   { label: "Based in Indianapolis", detail: "Central Indiana service area" },
   { label: "Turnaround", detail: "Stills often next day" },

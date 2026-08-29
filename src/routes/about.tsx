@@ -14,9 +14,10 @@ function AboutPage() {
         <Kicker>About</Kicker>
         <Heading>Indianapolis, with a license and a plan.</Heading>
         <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted">
-          {SITE.name} is a Part 107 aerial studio. We fly events, property,
-          inspections, and maps across Central Indiana — for people who already
-          know what they need from the air and just want it flown well.
+          {SITE.name} is the Part 107 aerial studio of {SITE.owner}. We fly
+          events, property, inspections, and maps across Central Indiana — for
+          people who already know what they need from the air and just want it
+          flown well.
         </p>
       </Section>
 

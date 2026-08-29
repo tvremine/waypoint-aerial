@@ -11,6 +11,7 @@ import { PreviewHostBridge } from "@/components/preview-host-bridge";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { SITE } from "@/lib/site";
+import { asset } from "@/lib/utils";
 import appCss from "../styles.css?url";
 
 export const Route = createRootRoute({
@@ -23,10 +24,17 @@ export const Route = createRootRoute({
       { name: "theme-color", content: "#080c14" },
     ],
     links: [
-      { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
+      { rel: "icon", type: "image/svg+xml", href: asset("favicon.svg") },
+      { rel: "icon", href: asset("favicon.ico") },
+      {
+        rel: "icon",
+        type: "image/png",
+        sizes: "32x32",
+        href: asset("brand/favicon-32x32.png"),
+      },
+      { rel: "apple-touch-icon", href: asset("brand/apple-touch-icon.png") },
       { rel: "stylesheet", href: appCss },
-      { rel: "manifest", href: "/__grok/manifest.webmanifest" },
-      { rel: "apple-touch-icon", href: "/__grok/icon-180.png" },
+      { rel: "manifest", href: asset("__grok/manifest.webmanifest") },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       {
         rel: "preconnect",

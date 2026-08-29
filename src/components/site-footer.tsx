@@ -46,7 +46,8 @@ export function SiteFooter() {
           <p className="text-xs font-medium tracking-[0.18em] text-faint uppercase">
             Studio
           </p>
-          <p className="mt-4 text-sm text-muted">{SITE.city}</p>
+          <p className="mt-4 text-sm text-muted">{SITE.owner}</p>
+          <p className="mt-1 text-sm text-muted">{SITE.city}</p>
           <a
             href={`mailto:${SITE.email}`}
             className="mt-2 inline-block text-sm text-muted transition-colors hover:text-fg"
@@ -57,7 +58,7 @@ export function SiteFooter() {
       </div>
       <div className="border-t border-border">
         <div className="mx-auto flex max-w-6xl flex-col gap-2 px-4 py-5 text-xs text-faint sm:flex-row sm:justify-between sm:px-6">
-          <p>© {new Date().getFullYear()} {SITE.name}. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} {SITE.name} · {SITE.owner}</p>
           <p>FAA Part 107 commercial operations.</p>
         </div>
       </div>

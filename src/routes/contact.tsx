@@ -32,7 +32,8 @@ function ContactPage() {
           <p className="text-xs font-medium tracking-[0.18em] text-faint uppercase">
             Studio
           </p>
-          <p className="mt-3 text-fg">{SITE.city}</p>
+          <p className="mt-3 text-fg">{SITE.owner}</p>
+          <p className="mt-1 text-sm text-muted">{SITE.city}</p>
           <p className="mt-1 text-sm text-muted">
             Serving {SITE.region}. Travel by request.
           </p>
@@ -43,7 +44,7 @@ function ContactPage() {
             {SITE.email}
           </a>
           <ul className="mt-8 space-y-3 border-t border-border pt-6 text-sm text-muted">
-            <li>FAA Part 107 Remote Pilot</li>
+            <li>FAA Part 107 Remote Pilot — {SITE.owner}</li>
             <li>Commercial sUAS liability on file</li>
             <li>COI issued to venues on request</li>
             <li>Stills often delivered next day</li>

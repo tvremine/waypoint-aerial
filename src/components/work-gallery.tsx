@@ -2,7 +2,7 @@ import { X } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 import { Media } from "@/components/media";
 import { FILTERS, WORK, type WorkCategory } from "@/lib/site";
-import { cn } from "@/lib/utils";
+import { asset, cn } from "@/lib/utils";
 
 export function WorkGallery({ limit }: { limit?: number }) {
   const [filter, setFilter] = useState<"all" | WorkCategory>("all");
@@ -104,7 +104,7 @@ export function WorkGallery({ limit }: { limit?: number }) {
           >
             <div className="overflow-hidden rounded-lg bg-surface">
               <img
-                src={selected.src}
+                src={asset(selected.src)}
                 alt={selected.alt}
                 className="max-h-[76dvh] w-full object-contain"
               />
