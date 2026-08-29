@@ -1,0 +1,1 @@
+import{c as e,d as t,l as n}from"./site-oREUoiRu.js";var r=t();function i({src:t,alt:i,className:a}){return(0,r.jsx)(`img`,{src:e(t),alt:i,className:n(`h-full w-full object-cover`,a)})}export{i as t};
