@@ -1,0 +1,15 @@
+node_modules
+.node_modules.lock
+.vercel
+.tanstack
+.nitro
+.output
+dist
+*.log
+.env
+.env.*
+!.env.example
+.DS_Store
+screenshots
+artifacts
+.grok

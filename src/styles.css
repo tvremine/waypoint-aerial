@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #080c14;
+  --color-surface: #101827;
+  --color-surface-2: #172033;
+  --color-fg: #f1ece4;
+  --color-muted: #8e97a8;
+  --color-faint: #6a7384;
+  --color-primary: #8f2a38;
+  --color-primary-hover: #a83444;
+  --color-primary-fg: #f7efe8;
+  --color-border: rgb(241 236 228 / 0.12);
+  --color-ring: #8f2a38;
+
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Cormorant Garamond", ui-serif, Georgia, "Times New Roman", serif;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+
+  --shadow-border: 0 0 0 1px rgb(241 236 228 / 0.1);
+  --shadow-border-hover: 0 0 0 1px rgb(241 236 228 / 0.18);
+
+  --z-index-overlay: 80;
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-smooth-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --motion-micro: 80ms;
+  --motion-quick: 150ms;
+  --motion-fast: 250ms;
+  --motion-slow: 400ms;
+  --motion-emphasis: 500ms;
+}
+
+@layer base {
+  html {
+    background: var(--color-bg);
+    color: var(--color-fg);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background: var(--color-bg);
+    color: var(--color-fg);
+    font-family: var(--font-sans);
+    min-height: 100dvh;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  ::selection {
+    background: var(--color-primary);
+    color: var(--color-primary-fg);
+  }
+
+  img {
+    outline: 1px solid rgb(241 236 228 / 0.1);
+    outline-offset: -1px;
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+.reveal {
+  animation: rise var(--motion-emphasis) var(--ease-smooth-out) both;
+}
+
+.reveal-2 {
+  animation-delay: 80ms;
+}
+.reveal-3 {
+  animation-delay: 160ms;
+}
+.reveal-4 {
+  animation-delay: 240ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal-2,
+  .reveal-3,
+  .reveal-4 {
+    animation: none;
+  }
+}
